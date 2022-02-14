@@ -1,4 +1,5 @@
 import discord, asyncio, random, time
+import os
 client = discord.Client()
 
 @client.event
@@ -65,5 +66,5 @@ async def on_message(message):
             await message.channel.send("꽝")
         if ran == 1:
             await message.channel.send("당첨")
-
-client.run('OTQyNjczNzc0NDUxNTIzNjU0.Ygn7XQ.HY2P3Ne0sttqg3t6564TDr_CaMk')
+access_token = os.environ['BOT_TOKEN']
+client.run(access_token)
